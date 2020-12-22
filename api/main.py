@@ -1,14 +1,17 @@
 from flask import Flask,jsonify,request
+from flask_cors import CORS
 import src.Core.routes as routes
 import pymongo
 conn=pymongo.MongoClient("mongodb://127.0.0.1:27017")
 db=conn['noteshare']
 app=Flask(__name__)
+CORS(app)
 @app.route("/api",methods=["POST"])
 def endNode():
     try:
 
         data=request.get_json()
+        
     except:data={}
     try:
 
