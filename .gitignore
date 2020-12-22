@@ -21,3 +21,7 @@ front/.env.production.local
 front/npm-debug.log*
 front/yarn-debug.log*
 front/yarn-error.log*
+
+api/src/Core/__pycache__/
+
+api/src/Core/general/__pycache__/
